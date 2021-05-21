@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import IngredientInput from './components/IngredientInput.js';
+import IngredientDisplay from './components/IngredientDisplay.js';
+import RecipeResults from './components/RecipeResults';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const url =
+		'https://api.edamam.com/search?q=chicken&app_id=8bab9160&app_key=9dd30ada650f82d0e912e3323aa7c2be';
+	return (
+		<div>
+			<h1>Clear Your Fridge!</h1>
+			<IngredientInput />
+			<IngredientDisplay />
+			<RecipeResults />
+		</div>
+	);
 }
 
 export default App;

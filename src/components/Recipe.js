@@ -7,7 +7,7 @@ const Recipe = () => {
 				src='https://www.edamam.com/web-img/25f/25feccd2eed4722604be4a9ffa1ac768.jpg'
 				alt=''
 			/>
-			<h2>Chicken Stew</h2>
+			<h2>Roast Chicken</h2>
 			<ul>
 				<li>1 whole chicken, about 3-4 pounds</li>
 				<li>--Salt and fresh-ground pepper, to taste</li>

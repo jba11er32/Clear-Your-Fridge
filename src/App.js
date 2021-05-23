@@ -5,10 +5,13 @@ import RecipeResults from './components/RecipeResults';
 import './App.css';
 
 function App() {
+	// Stored ingredients in a list
 	const [ingredientList, setIngredientList] = useState([]);
 
-	const [searchIngredient, setSearchIngredient] = useState('');
+	// the ingredient input by the user
+	const [searchIngredient, setSearchIngredient] = useState('chicken');
 
+	// the list of recipes that displays on page from users
 	const [recipeResults, setRecipeResults] = useState([]);
 
 	const searchOptions = {
@@ -18,25 +21,40 @@ function App() {
 		ingredient: 'input.value',
 	};
 
-	function getRecipeDetails() {
-		// const url = `${searchOptions.api}q=${searchOptions.ingredient}&app_id=${searchOptions.id}&app_key=${searchOptions.key}`;
+	useEffect(() => {
+		getRecipeDetails(searchIngredient);
+	}, []);
 
-		const url =
-			'https://api.edamam.com/search?q=chicken&app_id=8bab9160&app_key=9dd30ada650f82d0e912e3323aa7c2be';
+	function handleChange(event) {
+		setIngredientList();
+	}
+
+	function handleSubmit(event) {
+		event.preventDefault();
+		getRecipeDetails(searchIngredient);
+	}
+
+	function getRecipeDetails() {
+		const url = `${searchOptions.api}q=${searchOptions.ingredient}&app_id=${searchOptions.id}&app_key=${searchOptions.key}`;
+
+		// const url =
+		// 	'https://api.edamam.com/search?q=chicken&app_id=8bab9160&app_key=9dd30ada650f82d0e912e3323aa7c2be';
 
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
 				// console.log(res);
-				set;
+				setRecipeResults(res.data);
+				setSearchIngredient('');
 			});
 	}
 
 	return (
 		<div>
 			<h1>Clear Your Fridge!</h1>
-			<IngredientInput ingredientList={ingredientList} />
-			<RecipeResults />
+			<IngredientInput handleSubmit={handleSubmit} />
+			<IngredientDisplay ingredientList={ingredientList} />
+			<RecipeResults recipeResults={recipeResults} />
 		</div>
 	);
 }

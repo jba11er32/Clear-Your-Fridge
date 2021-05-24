@@ -14,13 +14,6 @@ function App() {
 	// the list of recipes that displays on page from users
 	const [recipeResults, setRecipeResults] = useState([]);
 
-	const searchOptions = {
-		key: process.env.REACT_APP_EDAMAM_KEY,
-		id: process.env.REACT_APP_EDAMAM_ID,
-		api: 'https://api.edamam.com/search?',
-		ingredient: 'input.value',
-	};
-
 	// function handleSubmit(event) {
 	// 	event.preventDefault();
 	// 	getRecipeDetails(searchIngredient);
@@ -34,6 +27,7 @@ function App() {
 				// handleSubmit={handleSubmit}
 				searchIngredient={searchIngredient}
 				setIngredientList={setIngredientList}
+				setSearchIngredient={setSearchIngredient}
 			/>
 			<IngredientDisplay ingredientList={ingredientList} />
 			<RecipeResults

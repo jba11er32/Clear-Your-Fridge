@@ -1,12 +1,11 @@
 import React from 'react';
 
-const IngredientDisplay = () => {
+const IngredientDisplay = ({ ingredientList }) => {
 	return (
 		<div>
 			<h2>Ingredients: </h2>
 			<ul>
-				<li>chicken</li>
-				<li>peas</li>
+				<li>{ingredientList}</li>
 			</ul>
 		</div>
 	);

@@ -1,10 +1,13 @@
 import React from 'react';
 
-const IngredientInput = () => {
+const IngredientInput = ({ setIngredientList }) => {
+	function handleChange(event) {
+		console.log(event);
+		setIngredientList(event.target.value);
+	}
 	return (
 		<div>
-			Ingredient: <input type='text' />
-			<button>Add</button>
+			Ingredient: <input type='text' onChange={handleChange} />
 		</div>
 	);
 };

@@ -42,6 +42,7 @@ button {
 	font-style: italic;
 	border-style: double;
 	height: 150px;
+	background-image: linear-gradient(rgb(163, 232, 241), #918cdf);
 }
 
 .results {
@@ -49,9 +50,14 @@ button {
 	margin: auto 0;
 }
 
+.recipeResults {
+	border: 5px double black;
+	background-image: linear-gradient(rgb(163, 232, 241), #918cdf);
+}
+
 .recipes {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	border: 5px solid black;
 	margin: 2px;
 	overflow: hidden;
@@ -59,8 +65,8 @@ button {
 }
 
 .img {
-	height: 30%;
-	width: 40rem;
+	height: 10%;
+	width: 350px;
 	align-items: center;
 }
 

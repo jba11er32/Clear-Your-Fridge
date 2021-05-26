@@ -38,7 +38,7 @@ function App() {
 			<div className='ingredients'>
 				<IngredientDisplay ingredientList={ingredientList} />
 			</div>
-			<div>
+			<div className='recipeResults'>
 				<RecipeResults
 					recipeResults={recipeResults}
 					ingredientList={ingredientList}

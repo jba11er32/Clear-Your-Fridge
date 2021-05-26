@@ -33,7 +33,3 @@ const RecipeResults = ({ recipeResults, setRecipeResults, ingredientList }) => {
 };
 
 export default RecipeResults;
-
-// ?q=ingredient1&q=ingredient2&q=ingredient3
-// OR
-//

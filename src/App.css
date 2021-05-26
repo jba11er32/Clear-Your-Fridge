@@ -70,7 +70,12 @@ button {
 	align-items: center;
 }
 
+ul {
+	list-style-type: none;
+}
+
 li {
 	font-weight: bold;
-	font-size: 17px;
+	font-size: 25px;
+	text-align: center;
 }

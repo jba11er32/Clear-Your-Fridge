@@ -37,3 +37,8 @@ As a user, I want to be able to find recipes based off the ingredients I choose.
 
 Bronze - Show a link to the recipe as well as a video
 Silver - Allow for recipes to be searched when submitted
+[
+
+### Blog Post
+
+https://dev.to/jba11er32/i-made-my-first-app-using-react-7hp

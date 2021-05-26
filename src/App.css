@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+* {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	margin: 2rem;
+	background-image: linear-gradient(#00bfff, #e0ffff, #48d1cc);
+	height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainGrid {
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	grid-template-rows: 20vh 4fr;
+	grid-gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header {
+	grid-column: 1 / span 3;
+	grid-row: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+	text-align: center;
+	width: 750px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: bold;
+}
+
+button {
+	font-weight: bold;
+}
+
+.list {
+	font-style: italic;
+	border-style: double;
+	height: 150px;
+}
+
+.results {
+	grid-column: 2 / span 2;
+	margin: auto 0;
+}
+
+.recipes {
+	display: flex;
+	flex-direction: row;
+	border: 5px solid black;
+	margin: 2px;
+	overflow: hidden;
+}
+
+.img {
+	height: 30%;
+	width: 40rem;
+	align-items: center;
+}
+
+li {
+	font-weight: bold;
+	font-size: 17px;
 }

@@ -9,7 +9,6 @@ const RecipeResults = ({ recipeResults, setRecipeResults, ingredientList }) => {
 			api: 'https://api.edamam.com/search?',
 			ingredient: ingredientList,
 		};
-
 		const url = `${searchOptions.api}q=${searchOptions.ingredient}&app_id=${searchOptions.id}&app_key=${searchOptions.key}`;
 
 		if (ingredientList) {
@@ -22,12 +21,19 @@ const RecipeResults = ({ recipeResults, setRecipeResults, ingredientList }) => {
 	}, [ingredientList]);
 
 	return (
-		<div>
+		<div className='results'>
+			<h1>Recipes</h1>
 			{recipeResults.map((recipe) => {
-				return <Recipe key={recipe.recipe.url} recipe={recipe} />;
+				return (
+					<Recipe className='recipes' key={recipe.recipe.url} recipe={recipe} />
+				);
 			})}
 		</div>
 	);
 };
 
 export default RecipeResults;
+
+// ?q=ingredient1&q=ingredient2&q=ingredient3
+// OR
+//

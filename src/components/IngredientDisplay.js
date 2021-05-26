@@ -2,8 +2,8 @@ import React from 'react';
 
 const IngredientDisplay = ({ ingredientList }) => {
 	return (
-		<div>
-			<h2>Ingredients: </h2>
+		<div className='list'>
+			<h2>Ingredient: </h2>
 			<ul>
 				<li>{ingredientList}</li>
 			</ul>

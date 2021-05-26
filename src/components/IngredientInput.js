@@ -4,7 +4,6 @@ const IngredientInput = ({ setIngredientList }) => {
 	const [ingredient, setIngredient] = useState('');
 
 	function handleChange(event) {
-		console.log(event);
 		setIngredient(event.target.value);
 	}
 

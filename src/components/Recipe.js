@@ -6,8 +6,8 @@ const Recipe = ({ recipe: { recipe } }) => {
 			<img src={recipe.image} alt={recipe.label} className='img' />
 			<h2>{recipe.label}</h2>
 			<ul>
-				{recipe.ingredientLines.map((ingredient) => {
-					return <li>{ingredient}</li>;
+				{recipe.ingredientLines.map((ingredient, i) => {
+					return <li key={ingredient + i}>{ingredient}</li>;
 				})}
 			</ul>
 			<p>

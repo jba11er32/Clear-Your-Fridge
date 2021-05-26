@@ -18,7 +18,7 @@ const RecipeResults = ({ recipeResults, setRecipeResults, ingredientList }) => {
 					return setRecipeResults(res.hits);
 				});
 		}
-	}, [ingredientList]);
+	}, [ingredientList, setRecipeResults]);
 
 	return (
 		<div className='results'>

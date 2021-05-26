@@ -5,7 +5,6 @@
 
 body {
 	margin: 2rem;
-	background-image: linear-gradient(#00bfff, #e0ffff, #48d1cc);
 	height: 100%;
 }
 
@@ -56,6 +55,7 @@ button {
 	border: 5px solid black;
 	margin: 2px;
 	overflow: hidden;
+	background-image: linear-gradient(rgb(163, 232, 241), #918cdf);
 }
 
 .img {
